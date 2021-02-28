@@ -1,31 +1,15 @@
 ﻿@model Chat.Application.ViewModels.RoomViewModel;
 @{ ViewData["Title"] = "Chat Room"; }
-<style>
-    body {
-        margin: 0px;
-        padding: 0px;
-    }
 
-    /*.msg {
-        position: absolute;
-        top: 0;
-        bottom: 30px;
-        border: 1px solid green;
-        margin-bottom: auto;
-        display: block;
-        overflow: scroll;
-        width: 100%;
-        white-space: nowrap;
-    }*/
-</style>
 <label>Talk to: </label>
 <select name="users" id="users">
     <option value="everybody">Everybody</option>
     @foreach (var user in Model.ActiveUsers)
     {
-<option value="@user">
-    @user
-</option>}
+        <option value="@user">
+            @user
+        </option>
+    }
 </select>
 
 <div class="msg">
@@ -47,21 +31,21 @@
         var protocol = location.protocol === "https:" ? "wss:" : "ws:";
         var wsUri = protocol + "//" + window.location.host;
         var socket = new WebSocket(wsUri);
-        socket.onopen = e => {
-            console.log("socket opened", e);
+
+        socket.onopen = e => {            
             socket.send(userName + ' has entered the chat!');            
         };
 
         socket.onclose = function (e) {
-            console.log("socket closed", e);            
+                
         };
 
-        socket.onmessage = function (e) {
-            console.log(e);
+        socket.onmessage = function (e) {            
             $('#msgs').append(e.data + '<br />');
             if (e.data.includes("has entered the chat!")) {
                 var nickname = e.data.split(" ")[0];
                 $("#users option[value='" + nickname + "']").remove();
+
                 $('#users').append($('<option>', {
                     value: nickname,
                     text: nickname

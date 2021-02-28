@@ -29,17 +29,14 @@ namespace Chat.Application
             services.AddScoped<IActiveUserService, ActiveUserService>();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime applicationLifetime)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            applicationLifetime.ApplicationStopping.Register(OnShutdown);
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
@@ -58,11 +55,6 @@ namespace Chat.Application
                     name: "default",
                     pattern: "{controller=Chat}/{action=Index}/{id?}");
             });
-        }
-
-        private void OnShutdown()
-        {
-
         }
     }
 }
