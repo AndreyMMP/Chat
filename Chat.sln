@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Application", "src\Chat.Application\Chat.Application.csproj", "{9B9F85E8-15E3-4627-9735-4906AB951082}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat.Application", "src\Chat.Application\Chat.Application.csproj", "{9B9F85E8-15E3-4627-9735-4906AB951082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Business", "src\Chat.Business\Chat.Business.csproj", "{58C8E0A8-3ED6-487C-9C7C-F15080F22707}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat.Business", "src\Chat.Business\Chat.Business.csproj", "{58C8E0A8-3ED6-487C-9C7C-F15080F22707}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Data", "src\Chat.Data\Chat.Data.csproj", "{79F98501-CACD-4780-A4B4-D74D70D586D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chat.Data", "src\Chat.Data\Chat.Data.csproj", "{79F98501-CACD-4780-A4B4-D74D70D586D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Test", "tests\Chat.Test\Chat.Test.csproj", "{0F1D98A6-F3A2-4EB4-99DF-8599312CA8AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{79F98501-CACD-4780-A4B4-D74D70D586D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79F98501-CACD-4780-A4B4-D74D70D586D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79F98501-CACD-4780-A4B4-D74D70D586D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F1D98A6-F3A2-4EB4-99DF-8599312CA8AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F1D98A6-F3A2-4EB4-99DF-8599312CA8AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F1D98A6-F3A2-4EB4-99DF-8599312CA8AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F1D98A6-F3A2-4EB4-99DF-8599312CA8AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
