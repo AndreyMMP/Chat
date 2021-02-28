@@ -12,8 +12,8 @@ O usuário pode sair de sala de chat.<br/><br/>
 Instruções para execução do projeto:<br/>
 1º Redis instalado na maquina com servidor executando na porta 6379; OU Redis sendo executando instancia em Docker na porta 6379<br/>
 Comandos docker para Redis:<br/>
-> docker pull redis<br/>
-> docker run -d -p 6379:6379 -i -t redis<br/>
+- docker pull redis<br/>
+- docker run -d -p 6379:6379 -i -t redis<br/>
 2º Executar projeto Chat.Application
 <br/><br/>
 #ENGLISH<br/>
@@ -30,6 +30,6 @@ The user can leave the chat room.<br/>
 Project execution instructions:<br/>
 1st Redis installed on the machine with a server running on port 6379; OR Redis running instance in Docker on port 6379<br/>
 Docker commands for Redis:<br/>
-> docker pull redis<br/>
-> docker run -d -p 6379:6379 -i -t redis <br/>
+- docker pull redis<br/>
+- docker run -d -p 6379:6379 -i -t redis <br/>
 #2nd Run Chat.Application project
