@@ -11,7 +11,7 @@ O usuário pode enviar mensagens publicamente direcionado para um outro usuário
 O usuário pode sair de sala de chat.<br/>
 <br/>
 Instruções para execução do projeto:<br/>
-<b>1º</b> Redis instalado na maquina com servidor executando na porta 6379; OU Redis sendo executando instancia em Docker na porta 6379<br/>
+<b>1º</b> Redis instalado na maquina com servidor executando na porta 6379; OU Redis sendo executado em instancia Docker na porta 6379<br/>
 Comandos docker para Redis:<br/>
 docker pull redis<br/>
 docker run -d -p 6379:6379 -i -t redis<br/>
