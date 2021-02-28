@@ -1,0 +1,112 @@
+﻿@model Chat.Application.ViewModels.RoomViewModel;
+@{ ViewData["Title"] = "Chat Room"; }
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /*.msg {
+        position: absolute;
+        top: 0;
+        bottom: 30px;
+        border: 1px solid green;
+        margin-bottom: auto;
+        display: block;
+        overflow: scroll;
+        width: 100%;
+        white-space: nowrap;
+    }*/
+</style>
+<label>Talk to: </label>
+<select name="users" id="users">
+    <option value="everybody">Everybody</option>
+    @foreach (var user in Model.ActiveUsers)
+    {
+<option value="@user">
+    @user
+</option>}
+</select>
+
+<div class="msg">
+    <div id="msgs"></div>
+</div>
+
+<div style="padding-top: 10px;">
+    <input type="text" 
+        style="position: absolute;
+        bottom: 20px;
+        width: 50%;" id="MessageField" placeholder="type message and press enter" />
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            var userName = '@Model.Nickname';
+
+        var protocol = location.protocol === "https:" ? "wss:" : "ws:";
+        var wsUri = protocol + "//" + window.location.host;
+        var socket = new WebSocket(wsUri);
+        socket.onopen = e => {
+            console.log("socket opened", e);
+            socket.send(userName + ' has entered the chat!');            
+        };
+
+        socket.onclose = function (e) {
+            console.log("socket closed", e);            
+        };
+
+        socket.onmessage = function (e) {
+            console.log(e);
+            $('#msgs').append(e.data + '<br />');
+            if (e.data.includes("has entered the chat!")) {
+                var nickname = e.data.split(" ")[0];
+                $("#users option[value='" + nickname + "']").remove();
+                $('#users').append($('<option>', {
+                    value: nickname,
+                    text: nickname
+                }));
+            } else if (e.data.includes("leaves the chat")) {
+                var nickname = e.data.split(" ")[0];
+                $("#users option[value='" + nickname + "']").remove();
+                RemoveActiveUser(nickname);
+            }
+        };
+
+        socket.onerror = function (e) {
+            
+        };
+
+        $('#MessageField').keypress(function (e) {
+            if (e.which != 13) {
+                return;
+            }
+
+            e.preventDefault();
+
+            var nickname = userName;
+            if ($('#users').val() != "everybody") {
+                nickname = userName + " says to " + $('#users').val();
+            } 
+
+            var message = nickname + ": " + $('#MessageField').val();
+            socket.send(message);
+            $('#MessageField').val('');
+        });
+
+        window.onbeforeunload = function () {
+            socket.send(userName + " leaves the chat");
+        }
+            function RemoveActiveUser(nickname) {
+                $.ajax({
+                    type: "POST",
+                    async: false,
+                    url: "/Chat/RemoveActiveUser",
+                    data: JSON.stringify({ "Nickname": nickname }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json"
+                });  
+            }
+    });
+    </script>
+}

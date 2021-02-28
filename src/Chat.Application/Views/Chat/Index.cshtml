@@ -1,0 +1,12 @@
+﻿<form enctype="multipart/form-data" asp-action="Index">
+    <div class="form-group">
+        <label for="nickname">Enter your Nickname</label>
+        <input type="text" class="form-control" name="nickname" placeholder="e.g. TheBestUser1993" required="required" pattern="[A-Za-z0-9]{1,20}">
+        <small style="color: red;">@ViewBag.error</small>
+        <br /><small style="color:dimgrey; font-style: italic;">Nickname rules:</small>
+        <br /><small style="color:dimgrey; font-style: italic;">20 characters allowed</small>
+        <br /><small style="color:dimgrey; font-style: italic;">Alphanumerics characters allowed</small>
+        <br /><small style="color:dimgrey; font-style: italic;">Empty space's NOT allowed</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Enter the chat!</button>
+</form>
