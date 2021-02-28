@@ -1,5 +1,5 @@
 #PORTUGUÊS<br/>
-Essa é uma aplicação de chat em tempo real utilizando Websockets como middleware, jQuery como cliente do Websocket e manipulação do DOM do HTML.
+Essa é uma aplicação de chat em tempo real utilizando Websockets como middleware em .Net Core; como cliente foi utilizado objeto WebSocket em JavaScript e jQuery para manipulação do DOM do HTML.
 <br/>Para controlar os acessos ao serviço foi utilizado o banco em memória Redis, armazenando em tempo real a entrada e a saída de usuários do chat.
 <br/>Para os testes unitários as ferramentar utilizadas foram xUnit e MOQ.
 <br/><br/>
@@ -18,7 +18,7 @@ docker run -d -p 6379:6379 -i -t redis<br/>
 <b>2º</b> Executar projeto Chat.Application
 <br/><br/>
 #ENGLISH<br/>
-This is a real-time chat application using Websockets as middleware, jQuery as a Websocket client and HTML DOM manipulation.
+This is a real-time chat application using Websockets as a middleware in .Net Core; as a client, a WebSocket object in JavaScript and jQuery was used to manipulate the HTML DOM.
 <br/>To control access to the service, the Redis memory bank was used, storing the entrance and exit of chat users in real time.
 <br/>For unit tests the tools used were xUnit and MOQ.
 <br/><br/>
