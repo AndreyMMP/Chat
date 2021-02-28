@@ -7,8 +7,8 @@ O usuário pode escolher um nickname e entrar na sala de chat.<br/>
 O usuário pode ver quem está conectado na sala de chat.<br/>
 O usuário pode enviar mensagens publicamente direcionado a todos que estão na sala.<br/>
 O usuário pode enviar mensagens publicamente direcionado para um outro usuário especifico.<br/>
-O usuário pode sair de sala de chat.<br/><br/>
-
+O usuário pode sair de sala de chat.<br/>
+<br/>
 Instruções para execução do projeto:<br/>
 <b>1º</b> Redis instalado na maquina com servidor executando na porta 6379; OU Redis sendo executando instancia em Docker na porta 6379<br/>
 Comandos docker para Redis:<br/>
