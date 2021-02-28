@@ -1,7 +1,7 @@
 #PORTUGUÊS<br/>
 Essa é uma aplicação de chat em tempo real utilizando Websockets como middleware, jQuery como cliente do Websocket e manipulação do DOM do HTML.
 Para controlar os acessos ao serviço foi utilizado o banco em memória Redis, armazenando em tempo real a entrada e a saída de usuários do chat.
-<br/>
+<br/><br/>
 Funcionalidades:<br/>
 O usuário pode escolher um nickname e entrar na sala de chat.<br/>
 O usuário pode ver quem está conectado na sala de chat.<br/>
@@ -19,7 +19,7 @@ Comandos docker para Redis:<br/>
 #ENGLISH<br/>
 This is a real-time chat application using Websockets as middleware, jQuery as a Websocket client and HTML DOM manipulation.
 To control access to the service, the Redis memory bank was used, storing the entrance and exit of chat users in real time.
-<br/>
+<br/><br/>
 Functionalities:<br/>
 The user can choose a nickname and enter the chat room.<br/>
 The user can see who is connected in the chat room.<br/>
