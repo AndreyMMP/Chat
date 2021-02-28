@@ -10,11 +10,11 @@ O usuário pode enviar mensagens publicamente direcionado para um outro usuário
 O usuário pode sair de sala de chat.<br/><br/>
 
 Instruções para execução do projeto:<br/>
-1º Redis instalado na maquina com servidor executando na porta 6379; OU Redis sendo executando instancia em Docker na porta 6379<br/>
+<b>1º</b> Redis instalado na maquina com servidor executando na porta 6379; OU Redis sendo executando instancia em Docker na porta 6379<br/>
 Comandos docker para Redis:<br/>
 docker pull redis<br/>
-docker run -d -p 6379:6379 -i -t redis<br/><br/>
-2º Executar projeto Chat.Application
+docker run -d -p 6379:6379 -i -t redis<br/>
+<b>2º</b> Executar projeto Chat.Application
 <br/><br/>
 #ENGLISH<br/>
 This is a real-time chat application using Websockets as middleware, jQuery as a Websocket client and HTML DOM manipulation.
@@ -28,8 +28,8 @@ The user can send messages publicly directed to another specific user.<br/>
 The user can leave the chat room.<br/>
 <br/>
 Project execution instructions:<br/>
-1st Redis installed on the machine with a server running on port 6379; OR Redis running instance in Docker on port 6379<br/>
+<b>1st</b> Redis installed on the machine with a server running on port 6379; OR Redis running instance in Docker on port 6379<br/>
 Docker commands for Redis:<br/>
 docker pull redis<br/>
-docker run -d -p 6379:6379 -i -t redis <br/><br/>
-#2nd Run Chat.Application project
+docker run -d -p 6379:6379 -i -t redis <br/>
+<b>2nd</b> Run Chat.Application project
