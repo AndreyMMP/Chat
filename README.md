@@ -1,7 +1,7 @@
 #PORTUGUÊS<br/>
 Essa é uma aplicação de chat em tempo real utilizando Websockets como middleware em .Net Core; como cliente foi utilizado objeto WebSocket em JavaScript e jQuery para manipulação do DOM do HTML.
 <br/>Para controlar os acessos ao serviço foi utilizado o banco em memória Redis, armazenando em tempo real a entrada e a saída de usuários do chat.
-<br/>Para os testes unitários as ferramentar utilizadas foram xUnit e MOQ.
+<br/>Para os testes unitários as ferramentas utilizadas foram xUnit e MOQ.
 <br/><br/>
 Funcionalidades:<br/>
 O usuário pode escolher um nickname e entrar na sala de chat.<br/>
